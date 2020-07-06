@@ -9,28 +9,20 @@ Produto
   <div class="container py-5">
     <div class="row mt-5">
       <div class="col-10 mx-auto col-md-6 my-3">
-        <img src="{% static 'img/product-2.png' %}" alt="">
+        <img src="{{product.image.url}}" alt="">
       </div>
       <div class="col-10 mx-auto col-md-6 my-3">
         <div class="">
-          <h1 class="product_title">HTC One</h1>
+          <h1 class="product_title">{{product.name}}</h1>
           <h5 class="text-info font-italic mb-3">
-            <span class="mr-1">R$</span> 900,00
+            <span class="mr-1">R$</span>{{product.price}}
           </h5>
           <p class="product_description">Descrição do Produto</p>
-          <p class="text-justify product_text">Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec metus leo, fermentum id semper et,
-            sagittis vitae quam. Nulla ullamcorper malesuada purus, vel porttitor ipsum vestibulum id.
-            Proin at fringilla lectus. Phasellus pellentesque, tortor vitae ultrices bibendum,
-            orci massa dignissim nunc, pharetra lobortis lacus lorem sit amet elit.
-            Pellentesque pharetra est ac dignissim fringilla. Integer velit dolor,
-            sollicitudin a blandit nec, sagittis ac felis. Donec et tellus arcu.
-          </p>
-          <p class="text-justify product_text">Sem estoque</p>
+          <p class="text-justify product_text">{{product.description}}</p>
+          <!-- Checks if products are available: -->
+          
         </div>
-
       </div>
     </div>
-
   </div>
 {% endblock %}
