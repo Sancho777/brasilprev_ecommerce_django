@@ -11,6 +11,7 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'username', 'password1', 'password2', 'email')
+        labels = {'first_name':'Nome', 'last_name':'Sobrenome'}
 
 class newProductForm(forms.ModelForm):
 
