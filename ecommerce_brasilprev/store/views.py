@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Category, Product, Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import Group, User
-from .forms import SignUpForm
+from .forms import SignUpForm, newProductForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 
@@ -64,3 +64,17 @@ def signinView(request):
 def signoutView(request):
     logout(request)
     return redirect('signin')
+
+def newProductView(request):
+    form = newProductForm()
+
+    if request.method == 'POST':
+        form = newProductForm(request.POST)
+        if form.is_valid():
+            form.save(commit=True)
+            return home(request)
+        else:
+            print("ERROR FORM INVALID")
+
+
+    return render(request, 'newproduct.html', {'form': form})
