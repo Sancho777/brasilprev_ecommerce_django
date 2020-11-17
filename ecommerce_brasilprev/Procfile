@@ -1,1 +1,1 @@
-web: gunicorn ecommerce_brasilprev.wsgi
+web: gunicorn wsgi
