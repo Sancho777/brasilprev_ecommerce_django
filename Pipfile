@@ -15,12 +15,11 @@ psycopg2 = "*"
 pytz = "*"
 sqlparse = "*"
 whitenoise = "*"
-Django>=3.0.0,<3.0.8
-djangorestframework>=3.9.0,<3.10.0
-Pillow
-django-crispy-forms
-django-heroku
-gunicorn
+djangorestframework = "*"
+Pillow = "*"
+django-crispy-forms = "*"
+django-heroku = "*"
+gunicorn = "*"
 
 
 [requires]
