@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Novo Produto
+{% endblock %}
+
+{% block content %}
+
+ <div>
+   <div class="mx-auto">
+     <br>
+     <h1 class="product_title text-center">
+       Cadastrar novo produto
+     </h1>
+     <br>
+     <div class="col-9 col-sm-9 col-md-6 col-lg-5 mx-auto bg-light">
+       <br>
+       <form class="" method="post" enctype='multipart/form-data'>
+         {% csrf_token %}
+         <p>{{ form | crispy }}</p>
+         <button type="submit" name="button" class="btn btn-secondary">Cadastrar</button>
+       </form>
+       <br>
+     </div>
+   </div>
+   <div class="mx-auto">
+     <div class="container">
+       <p class="font-weigth-bold">
+         Caro cliente,
+         <br>
+         <br>
+
+         <br>
+         <a href="{% url 'home' %}">Continue suas compras</a> e aproveite as nossas promoções!
+       </p>
+     </div>
+   </div>
+
+ </div>
+ <br>
+{% endblock %}

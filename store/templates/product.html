@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Produto
+{% endblock %}
+
+{% block content %}
+  <div class="container py-5">
+    <div class="row mt-5">
+      <div class="col-10 mx-auto col-md-6 my-3">
+        <img src="{{product.image.url}}" alt="">
+      </div>
+      <div class="col-10 mx-auto col-md-6 my-3">
+        <div class="">
+          <h1 class="product_title">{{product.name}}</h1>
+          <h5 class="text-info font-italic mb-3">
+            <span class="mr-1">R$</span>{{product.price}}
+          </h5>
+          <p class="product_description">Descrição do Produto</p>
+          <p class="text-justify product_text">{{product.description}}</p>
+          <!-- Checks if products are available: -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
