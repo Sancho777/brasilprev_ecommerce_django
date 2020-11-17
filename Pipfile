@@ -13,14 +13,8 @@ django-heroku = "*"
 gunicorn = "*"
 psycopg2 = "*"
 pytz = "*"
-sqlparse = "*"
-whitenoise = "*"
 djangorestframework = "*"
 Pillow = "*"
-django-crispy-forms = "*"
-django-heroku = "*"
-gunicorn = "*"
-
 
 [requires]
 
