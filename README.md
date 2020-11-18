@@ -11,7 +11,7 @@ registration of your customers and products.
 
 # Testing
 
-to make visualization easier the project is deployed in the following link from heroku:
+To make visualization easier the project is deployed in the following link from heroku:
 
 https://brasilprevtestams.herokuapp.com/
 
